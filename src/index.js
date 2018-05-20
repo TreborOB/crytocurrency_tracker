@@ -6,7 +6,7 @@ import {Mockgoose} from "mockgoose";
 import usersRouter from "./api/users/index";
 import {loadUsers} from "./usersData";
 import crytosRouter from "./api/crytos/index";
-import logger  from "morgan";
+import logger from "morgan";
 import "babel-polyfill";
 
 dotenv.config();

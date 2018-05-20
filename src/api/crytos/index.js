@@ -1,7 +1,7 @@
 import express from "express";
 import Cryto from "./crytoModel";
 import asyncHandler from "express-async-handler";
-import User from "../users/userModel";
+
 const router = express.Router();
 
 router.get("/", asyncHandler(async (req, res) => {
