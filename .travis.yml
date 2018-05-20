@@ -1,0 +1,13 @@
+dist: trusty
+language: node_js
+node_js:
+- stable
+before_script:
+- npm run build
+deploy:
+  provider: heroku
+  api_key:
+    secure: hnU8j62LHz6AeB306bq2KVPzcS5qWx3QcJp7ZBwQ8gTcLMdCzhYcA8hcBeJ47QBc/mRkrREdIzX2S2NQCF8WwLb0VNPP0RadzBmiQSVFCrCsvAWNeF2HqNDEzc0cRdIBN949SL/PTd0RqylDl2+JyoW5Z6MtDtHe+fw5ZvXKrBwby34DCwZUihITRNMNd0ZNLTbmqNklns1ViM8U/Coo1R+/n6qT69JtB7wSn/oTlH2mMksY5GoOXMrFIv72ydQWchinDba2cFw+c8NbwtZgGZiYvG/Il3SHpOP/Ks+UB+vekNTH4g8rS7uVV/VPa0JYDDGpKEaOfSQzjY0utaXZJ57PVL05gqGbkk+P6sfyptUS+94CCQkfQjl5aHpl7QGQKTYMqASgs7VOAq/KsnvWNFAe+BHKj4OqdSNDKeKRsnxZSW5oGhoMQxWAuNgZ4N0IxtBfD+qpTXL1PNMAwOpQNBudVmTzUXxto8RMNdU0ySO6SdwYlCgUO3D+o6h7UtE6YAWV1sEFoNK7UheOCKgBb1agOoI6arQ2FC6CNk0BFTcOzGw5L4XwRVZmf6B0q6u0F0a4t6M3QNCuOGjnGWyUBC9ns4sdyvr4a6X21fRTEd8N/kwg3t94tsoy9AofmIzLcFsj202AcnmRHC9YUxmm0P6k4+Zy+iSJUhsmSZztfBI=
+  app: crytocurrency-tracker
+  on:
+    repo: TreborOB/crytocurrency_tracker
