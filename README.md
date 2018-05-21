@@ -45,7 +45,7 @@ The application is hosted on Heroku: https://crytocurrency-tracker.herokuapp.com
 Testing is carried out on both the crypto currency API and a user API (which was not incorporated in the final design), with a visual representation of the tests being displayed using Mochawesome.
 
 ##### Mochawesome HTML test output #####
-![additional_info](/additional_info.png)
+![additional_info](/test_report.png)
 
 ## Extra features
 
