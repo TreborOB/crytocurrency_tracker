@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 2,
-    "tests": 6,
-    "passes": 6,
+    "tests": 5,
+    "passes": 5,
     "pending": 0,
     "failures": 0,
-    "start": "2018-05-20T21:38:17.246Z",
-    "end": "2018-05-20T21:38:18.625Z",
-    "duration": 1379,
-    "testsRegistered": 6,
+    "start": "2018-05-21T17:46:28.901Z",
+    "end": "2018-05-21T17:46:30.399Z",
+    "duration": 1498,
+    "testsRegistered": 5,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "a32257ef-edd5-4b6f-9fd9-96bbfd6181e8",
+    "uuid": "a1cf176f-98b2-4391-b274-75287b9e6078",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "b83ec04f-320b-4594-ac9a-bbdbde173ca9",
+        "uuid": "bf96983b-ab0b-4c69-a735-ff4967aceac9",
         "title": "Crytos API unit test",
         "fullFile": "/Users/robertobrien/Desktop/crytocurrency-tracker/src/test/testCrytoAPI.js",
         "file": "/src/test/testCrytoAPI.js",
@@ -39,7 +39,7 @@
             "title": "should add a cryto",
             "fullTitle": "Crytos API unit test should add a cryto",
             "timedOut": false,
-            "duration": 932,
+            "duration": 1086,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -48,7 +48,7 @@
             "code": "// post to /api/crytos\n(0, _supertest2.default)(_index.app).post(\"/api/crytos\").set(\"Authorization\", \"BEARER eyJhbGciOiJIUzI1NiJ9.dXNlcjE.FmYria8wq0aFDHnzYWhKQrhF5BkJbFNN1PqNyNQ7V4M\").send({ name: \"TEST\", symbol: \"XYP\", username: \"Username 1\", price: \"100\", market_cap_eur: \"200\", percent_change_24h: \"10\", amount_purchased: \"10\", quantity_purchased: \"20\" }).expect(\"Content-type\", /json/).expect(201).end(function (err, res) {\n    res.status.should.equal(201);\n    done();\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "2dbbc976-c682-43af-a250-da6b86445b7b",
+            "uuid": "e7b417f7-433f-43e6-884c-7fe36703bb3b",
             "isHook": false,
             "skipped": false
           },
@@ -56,7 +56,7 @@
             "title": "should return collection of JSON documents",
             "fullTitle": "Crytos API unit test should return collection of JSON documents",
             "timedOut": false,
-            "duration": 13,
+            "duration": 12,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -65,44 +65,26 @@
             "code": "(0, _supertest2.default)(_index.app).get(\"/api/crytos\").set('Authorization', \"BEARER eyJhbGciOiJIUzI1NiJ9.dXNlcjE.FmYria8wq0aFDHnzYWhKQrhF5BkJbFNN1PqNyNQ7V4M\").expect(\"Content-type\", /json/).expect(200) // This is the HTTP response\n.end(function (err, res) {\n    // HTTP status should be 200\n    res.status.should.equal(200);\n    done();\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "bcfbd799-1437-4107-9117-c854d050d48f",
-            "isHook": false,
-            "skipped": false
-          },
-          {
-            "title": "should deny access to crytos",
-            "fullTitle": "Crytos API unit test should deny access to crytos",
-            "timedOut": false,
-            "duration": 3,
-            "state": "passed",
-            "speed": "fast",
-            "pass": true,
-            "fail": false,
-            "pending": false,
-            "code": "(0, _supertest2.default)(_index.app).get(\"/api/crytos\").expect(\"Content-type\", /json/).expect(401) // This is the HTTP response\n.end(function (err, res) {\n    // HTTP status should be 401\n    res.status.should.equal(200); //Should be 401, only here for the time being for testing\n    done();\n});",
-            "err": {},
-            "isRoot": false,
-            "uuid": "b2c64c3f-5328-4e57-a562-9e621f5cd376",
+            "uuid": "f2966528-b763-4653-8e33-8ac6086455c2",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "2dbbc976-c682-43af-a250-da6b86445b7b",
-          "bcfbd799-1437-4107-9117-c854d050d48f",
-          "b2c64c3f-5328-4e57-a562-9e621f5cd376"
+          "e7b417f7-433f-43e6-884c-7fe36703bb3b",
+          "f2966528-b763-4653-8e33-8ac6086455c2"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 948,
+        "duration": 1098,
         "root": false,
         "rootEmpty": false,
         "_timeout": 120000
       },
       {
-        "uuid": "114db0c4-3b61-4f59-a500-93af65ae32ae",
+        "uuid": "5501c077-2f22-4c8c-b7df-fa289e95c94f",
         "title": "Users API unit test",
         "fullFile": "/Users/robertobrien/Desktop/crytocurrency-tracker/src/test/testUserAPI.js",
         "file": "/src/test/testUserAPI.js",
@@ -113,7 +95,7 @@
             "title": "should return collection of JSON documents",
             "fullTitle": "Users API unit test should return collection of JSON documents",
             "timedOut": false,
-            "duration": 3,
+            "duration": 5,
             "state": "passed",
             "speed": "fast",
             "pass": true,
@@ -122,7 +104,7 @@
             "code": "// calling home page api\n(0, _supertest2.default)(_index.app).get('/api/users').expect('Content-type', /json/).expect(200) // This is the HTTP response\n.end(function (err, res) {\n    // HTTP status should be 200\n    res.status.should.equal(200);\n    done();\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "d2da285d-bb95-428d-b17f-384b8455e5ee",
+            "uuid": "41f9252c-2cba-4a1a-84f1-77214259f10f",
             "isHook": false,
             "skipped": false
           },
@@ -130,7 +112,7 @@
             "title": "should register a user",
             "fullTitle": "Users API unit test should register a user",
             "timedOut": false,
-            "duration": 190,
+            "duration": 181,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -139,7 +121,7 @@
             "code": "(0, _supertest2.default)(_index.app).post('/api/users').query({ action: 'register' }).send({ username: 'User 4', password: 'Password 4' }).expect('Content-type', /json/).expect(201).end(function (err, res) {\n    res.status.should.equal(201);\n    done();\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "184bcb70-cc00-468f-838f-c96d8e0dc48d",
+            "uuid": "6c503027-0e4c-42bb-a060-537e03179ad1",
             "isHook": false,
             "skipped": false
           },
@@ -147,7 +129,7 @@
             "title": "should authenticate a user",
             "fullTitle": "Users API unit test should authenticate a user",
             "timedOut": false,
-            "duration": 189,
+            "duration": 174,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -156,21 +138,21 @@
             "code": "(0, _supertest2.default)(_index.app).post('/api/users').send({ username: 'User 1', password: 'Password 1' }).expect('Content-type', /json/).expect(201).end(function (err, res) {\n    res.status.should.equal(200);\n    res.body.token.substring(0, 3).should.equal('BEA');\n    done();\n});",
             "err": {},
             "isRoot": false,
-            "uuid": "b36da8f0-58bb-4bd1-b2c2-a2988461f684",
+            "uuid": "e3f23d5c-ead7-4f64-8251-ab34a0f03389",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "d2da285d-bb95-428d-b17f-384b8455e5ee",
-          "184bcb70-cc00-468f-838f-c96d8e0dc48d",
-          "b36da8f0-58bb-4bd1-b2c2-a2988461f684"
+          "41f9252c-2cba-4a1a-84f1-77214259f10f",
+          "6c503027-0e4c-42bb-a060-537e03179ad1",
+          "e3f23d5c-ead7-4f64-8251-ab34a0f03389"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 382,
+        "duration": 360,
         "root": false,
         "rootEmpty": false,
         "_timeout": 120000

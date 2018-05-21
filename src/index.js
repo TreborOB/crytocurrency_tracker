@@ -5,6 +5,7 @@ import mongoose from "mongoose";
 import {Mockgoose} from "mockgoose";
 import usersRouter from "./api/users/index";
 import {loadUsers} from "./usersData";
+import {loadCrytos} from "./crytosData";
 import crytosRouter from "./api/crytos/index";
 import logger from "morgan";
 import "babel-polyfill";
@@ -53,7 +54,7 @@ mongoose.connection.on("error", (err) => {
 
 if (process.env.seedDb) {
     loadUsers();
-    //loadCrytos()
+    loadCrytos();
 }
 
 app.listen(port, () => {

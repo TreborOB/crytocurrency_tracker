@@ -1,6 +1,6 @@
 import React from "react";
-import ReactTable from "react-table"
-import {Link} from "react-router-dom"
+import ReactTable from "react-table" ;
+import {Link} from "react-router-dom" ;
 import * as expressAPI from "../api";
 import update from "immutability-helper";
 
@@ -8,14 +8,14 @@ class Home extends React.Component {
 
     state = {
         cryptos: []
-    };
+    } ;
 
     async componentDidMount() {
         expressAPI.getAll()
             .then(res => {
                 const cryptos = res.data;
                 this.setState({cryptos: cryptos});
-            })
+            }) ;
     }
 
     onClick(e) {
@@ -48,13 +48,17 @@ class Home extends React.Component {
             Cell: ({row}) => (<Link to={{pathname: `/coins/${row.name}`}}>{row.name}</Link>),
         }, {
             Header: "Symbol",
-            accessor: "symbol",
+            accessor: "symbol"
         }, {
             Header: "Price",
             accessor: "price",
-        }, {
-            Header: "Market Cap (EUR)",
-            accessor: "market_cap_eur",
+        },  {
+            Header: "Chart",
+            Cell: row => (
+                <div>
+                    <button className="btn btn-primary" onClick={() => this.onClick(row.original)}>Remove</button>
+                </div>
+            )
         },  {
             Header: "Number of Coins",
             accessor: "amount_purchased",
@@ -85,7 +89,7 @@ class Home extends React.Component {
                         <div className="well">Total Portfolio Value (€): {totalInvested}</div>
                     </div>
                 </div>
-                <ReactTable
+                <ReactTable highlight
                     data={this.state.cryptos}
                     columns={columns}
                     minRows={10}

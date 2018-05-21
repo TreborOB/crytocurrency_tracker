@@ -9,6 +9,11 @@ router.get("/", asyncHandler(async (req, res) => {
     return res.send(crytos);
 }));
 
+router.get("/:id", asyncHandler(async (req, res) => {
+    const crytos = await Cryto.findById(req.params.id);
+    return res.send(crytos);
+}));
+
 router.post('/', asyncHandler(async (req, res) => {
     const newCryto = req.body;
     if (newCryto) {

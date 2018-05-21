@@ -80,7 +80,7 @@ class Prices extends React.Component {
         }, {
             Header: "Name",
             accessor: "name",
-            Cell: ({row}) => (<Link to={{pathname: `/coins/${row.name}`}}>{row.name}</Link>),
+            Cell: ({row}) => (<Link to={{pathname: `/coins/${row.symbol}`}}>{row.name}</Link>),
         }, {
             Header: "Symbol",
             accessor: "symbol",

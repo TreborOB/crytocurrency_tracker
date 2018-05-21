@@ -5,6 +5,10 @@ export const getAll = async () => {
     return await axios.get("/api/crytos");
 };
 
+export const getSpecific = async (id) => {
+    return await axios.get(`/api/crytos/${id}`);
+};
+
 export const postCrypto = async (name, symbol, price, market_cap_eur, percent_change_24h, amount_purchased, quantity_purchased) => {
     const resp = await axios.post("/api/crytos", {
         name: name, symbol: symbol ,price: price, market_cap_eur: market_cap_eur,
