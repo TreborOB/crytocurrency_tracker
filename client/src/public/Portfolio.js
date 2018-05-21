@@ -15,7 +15,7 @@ class Home extends React.Component {
             .then(res => {
                 const cryptos = res.data;
                 this.setState({cryptos: cryptos});
-            }) ;
+            });
     }
 
     onClick(e) {
@@ -30,7 +30,7 @@ class Home extends React.Component {
     }
 
     deleteFromDB(e) {
-        expressAPI.deleteCryto(e._id) ;
+        expressAPI.deleteCryto(e._id);
     }
 
     render() {

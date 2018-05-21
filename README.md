@@ -36,7 +36,7 @@ The application is hosted on Heroku: https://crytocurrency-tracker.herokuapp.com
 
 ## Extra features
 
-## Independent learning.
+## Independent learning
 
 
 

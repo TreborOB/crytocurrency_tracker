@@ -1,5 +1,6 @@
 import supertest from "supertest";
 import {app} from "../index.js";
+import should from "should";
 
 describe("Crytos API unit test", function () {
     this.timeout(120000);
