@@ -54,7 +54,7 @@ mongoose.connection.on("error", (err) => {
 
 if (process.env.seedDb) {
     loadUsers();
-    loadCrytos();
+    //loadCrytos();
 }
 
 app.listen(port, () => {

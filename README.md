@@ -3,8 +3,7 @@
 Name: Robert O' Brien
 
 ## Overview
-Crytocurrency Tracker is a crytocurrency tracking application which allows a user to create a custom list of crytocurrencies - each crytocurrency can then displayed along with it's price, market cap and many other cryrocurrency attributes.
-The Coin Market Cap API is used to display live crytocurrency prices.
+Cryptocurrency Tracker is a cryptocurrency tracking application which allows a user to create a custom list of cryptocurrencies - each cryptocurrency can then be displayed along with its price, market cap and many other cryptocurrency attributes. The Coin Market Cap API is used to display live cryptocurrency prices.
 
 To run the application, simply clone or download the project and then run npm install + npm start in both the projects root and client folder.
 
@@ -24,21 +23,36 @@ The application is hosted on Heroku: https://crytocurrency-tracker.herokuapp.com
 
 | HTTP Method |  Description |
 | -- | -- |
-| GET: /api/crytos | return all crytos |
-| GET: /api/crytos/:id | returns the specified cryto by Id |
-| POST: /api/crytos | add a new cryto |
-| PUT: /api/crytos | update a cryto |
-| DELETE: /api/crytps/:id | delete an cryto |
+| GET: /api/crytos | return all crypto |
+| GET: /api/crytos/:id | returns the specified crypto by Id |
+| POST: /api/crytos | add a new crypto |
+| PUT: /api/crytos | update a crypto |
+| DELETE: /api/crytps/:id | delete an crypto |
 
 ## UI Design
 
+##### Coin List Screen #####
+![coin list](/coin_list.png)
+
+##### Portfolio Screen #####
+![portfolio](/portfolio.png)
+
+##### Additional Coin Information Screen #####
+![additional info](/additional_info.png)
+
 ## Testing
+
+Testing is carried out on both the crypto currency API and a user API (which was not incorporated in the final design), with a visual representation of the tests being displayed using Mochawesome.
+
+##### Mochawesome HTML test output #####
+![additional_info](/additional_info.png)
 
 ## Extra features
 
+1. The main coin list route has been configured to update the various crypto attributes every 10 seconds
+
 ## Independent learning
 
+1. The application makes use of the following Cyptocompare API (https://coinmarketcap.com/api/) to retrieve list prices from and display then in the react tables on both the coin list and portfolio screens.
 
-
-
-
+2. A chart for each crytocurrency is supplied by the npm module cryptowatch-embed.
