@@ -11,7 +11,7 @@ class coinDetail extends React.Component {
     };
 
     componentDidMount() {
-        let coinName = this.props.match.params.id ;
+        let coinName = this.props.match.params.id;
         this.setState({coinSymbol: coinName});
 
         axios.get("https://api.coinmarketcap.com/v1/ticker/?convert=EUR&limit=30")
@@ -20,10 +20,10 @@ class coinDetail extends React.Component {
                 let allCoinDetails = _.find(cryptos, "symbol", coinName);
                 this.setState({cryptos: allCoinDetails});
             });
-        console.log(this.state.coinSymbol) ;
+        console.log(this.state.coinSymbol);
 
-        let chart = new CryptowatchEmbed('kraken', this.state.coinSymbol+'eur', {
-            width: 1500,
+        let chart = new CryptowatchEmbed('kraken', this.state.coinSymbol + 'eur', {
+            width: 1000,
             height: 500,
         });
         chart.mount('#chart-container');
@@ -31,13 +31,13 @@ class coinDetail extends React.Component {
 
     render() {
         return (
-                <div>
-                    <div className="panel panel-primary">
-                        <div className="panel-heading"><h2>{this.state.coinSymbol}</h2></div>
-                            <div className="panel-body">
-                                <div id="chart-container"></div>
-                                </div>
+            <div>
+                <div className="panel panel-primary">
+                    <div className="panel-heading"><h2>{this.state.coinSymbol}</h2></div>
+                    <div className="panel-body">
+                        <div id="chart-container"></div>
                     </div>
+                </div>
             </div>
         );
     }

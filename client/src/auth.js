@@ -32,11 +32,11 @@ class Auth {
          */
     }
 
-       static getToken() {
-            return localStorage.getItem('token');
-        }
-
+    static getToken() {
+        return localStorage.getItem('token');
     }
 
-    export default Auth;
+}
+
+export default Auth;
 

@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import * as expressAPI from "../api";
-import ReactTable from "react-table" ;
-import {Link} from "react-router-dom" ;
+import ReactTable from "react-table";
+import {Link} from "react-router-dom";
 import update from "immutability-helper";
 
 class Prices extends React.Component {
@@ -14,26 +14,24 @@ class Prices extends React.Component {
         quantity_purchased: "",
         date: ""
     };
+    handleAmountChange = (e) => (this.setState({
+        amount_purchased: e.target.value
+    }));
+    handleQuantityChange = (e) => (this.setState({
+        quantity_purchased: e.target.value
+    }));
 
     onClick(e) {
         this.addToPortfolio(e);
         this.removeFromList(e);
-        document.getElementById("amount").value =  "";
-        document.getElementById("quantity").value =  "";
+        document.getElementById("amount").value = "";
+        document.getElementById("quantity").value = "";
     }
 
     addToPortfolio(e) {
         expressAPI.postCrypto(this.state.cryptos[e].name, this.state.cryptos[e].symbol, this.state.cryptos[e].price_eur, this.state.cryptos[e].market_cap_eur,
             this.state.cryptos[e].percent_change_24h, this.state.amount_purchased, this.state.quantity_purchased);
     }
-
-    handleAmountChange = (e) =>  (this.setState({
-        amount_purchased: e.target.value
-    }));
-
-    handleQuantityChange = (e) =>  (this.setState({
-        quantity_purchased: e.target.value
-    }));
 
     removeFromList(index) {
         this.setState(prevState => ({
@@ -97,10 +95,12 @@ class Prices extends React.Component {
             Header: "Add to Portfolio",
             Cell: row => (
                 <div>
-                        <button className="btn btn-primary" onClick={() => this.onClick(row.index)}>Add</button>
-                        <br/>
-                        <input type="number" id="amount" placeholder="amount" min="0" onChange={this.handleAmountChange}/><br/>
-                        <input type="number" id="quantity" placeholder="quantity" min="0" onChange={this.handleQuantityChange}/>
+                    <button className="btn btn-primary" onClick={() => this.onClick(row.index)}>Add</button>
+                    <br/>
+                    <input type="number" id="amount" placeholder="amount" min="0"
+                           onChange={this.handleAmountChange}/><br/>
+                    <input type="number" id="quantity" placeholder="quantity" min="0"
+                           onChange={this.handleQuantityChange}/>
                     <p/>
                 </div>
             )
