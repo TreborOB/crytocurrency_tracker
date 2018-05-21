@@ -20,9 +20,6 @@ class coinDetail extends React.Component {
                 let allCoinDetails = _.find(cryptos, "symbol", coinName);
                 this.setState({cryptos: allCoinDetails});
             });
-
-        //let chart = new CryptowatchEmbed('bitfinex', 'btcusd');
-
         console.log(this.state.coinSymbol) ;
 
         let chart = new CryptowatchEmbed('kraken', this.state.coinSymbol+'eur', {
@@ -31,8 +28,6 @@ class coinDetail extends React.Component {
         });
         chart.mount('#chart-container');
     }
-
-
 
     render() {
         return (
